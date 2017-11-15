@@ -29,17 +29,21 @@ $longResult = $a . $operation . $b . "=" . $result;
 
 
 require_once 'vendor/autoload.php';
+Twig_Autoloader::register();
+
+
+
 
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculator result</title>
-</head>
-<body>
-<?= $longResult ?>
-</body>
-</html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Calculator result</title>-->
+<!--</head>-->
+<!--<body>-->
+<?//= $longResult ?>
+<!--</body>-->
+<!--</html>-->
