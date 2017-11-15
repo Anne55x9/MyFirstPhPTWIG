@@ -31,6 +31,13 @@ $longResult = $a . $operation . $b . "=" . $result;
 require_once 'vendor/autoload.php';
 Twig_Autoloader::register();
 
+$loader = new Twig_Loader_Filesystem('view');
+$twig = new Twig_Environment($loader,array('auto_reload' => true ));
+
+$template = $twig->loadTemplate('indexPhP.html.twig');
+
+$parametersToTwig = array('a' => $a, 'b' => $b, 'operation'=> $operation, 'result'=> $result);
+echo $template->render($parametersToTwig);
 
 
 
